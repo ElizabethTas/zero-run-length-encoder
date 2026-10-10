@@ -1,0 +1,17 @@
+{
+  "name": "zero-run-length-encoder",
+  "version": "0.1.0",
+  "description": "Byte stream compression that replaces consecutive zero bytes with a two-byte count marker",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
