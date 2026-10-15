@@ -33,3 +33,10 @@ The trade-off is the escape byte. Because `0xFF` can appear as real data, every 
 - `MAX_RUN_PER_MARKER` — `255`.
 
 Input may be a `Uint8Array` or a plain array of integers in `0..255`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
